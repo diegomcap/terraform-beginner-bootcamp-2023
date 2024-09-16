@@ -1,7 +1,13 @@
 # Terraform Beginner Bootcamp 2023
 
+## Semantic Versioning :mage:
 
+This Project is going utilize semantic versioning for its tagging.
+[semver.org](https://semver.org)
 
+The general format:
+
+**MAJOR.MINOR.Patch**, EG. `1.0.1`
 
 
 
@@ -92,3 +98,53 @@ https://en.wikipedia.org/wiki/Chmod
 We need to be careful when using the Init becaue it will  not rerun if restart an existig workspace.
 
 https://www.gitpod.io/docs/configure/worspaces/tasks
+
+
+### Working Env Vars
+
+#### env command
+We can list out all Enviroment variables (Env Vars) using the `env` command
+
+We can Filter specific env vars using GREP eg. `env | grep AWS_`
+
+#### Setting and Unsetting Env Vars 
+
+In the terminal we can set using `export HELLO=´world`
+
+In the terminal we can unset using `unset HELLO`
+
+We can sewt an env var temporarily when just running a command
+
+```sh
+HELLO='world' ./bin/print_message
+```
+Within a bash script we can set env var without writing export eg.
+```sh
+#!/usr/bin/env bash
+
+HELLO='world'
+
+echo $HELLO
+```
+
+## Printing Vars
+
+We can print an env var using echo eg. `echo $HELLO`
+
+#### Scoping of Env Vars
+
+When you open up new bash terminals in VSCode it will not be aware of env vars that you hace set in another window.
+
+If you want to Env Vars to persist acrss all future bash terminals are open you need to set env vars in your bash profile. eg.`.bash_profile`
+
+#### Persisting Env VArs in Gitpod 
+
+We can persist env vars into gitpod by storing them in Gitpod Secrets Storage.
+
+```
+gp env HELLO='world'
+```
+
+All future workspaces launched will set the env vars for all bash teriminals opened in thoes workspaces.
+
+Ypu can also set env vars in the `.gitpod.yml` but this can only contain non-sensitive env vars.
