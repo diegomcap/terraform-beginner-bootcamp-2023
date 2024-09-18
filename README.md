@@ -9,9 +9,9 @@ The general format:
 
 **MAJOR.MINOR.Patch**, EG. `1.0.1`
 
-MAJOR version when you manke incompatible API changes
-MINOR version when you add functionality in a backward compatible manner
-PATCH version when you make backward compatible bug fixes
+- MAJOR version when you manke incompatible API changes
+- MINOR version when you add functionality in a backward compatible manner
+- PATCH version when you make backward compatible bug fixes
 
 ## Install the Terraform CLI
 
