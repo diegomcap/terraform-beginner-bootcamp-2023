@@ -1,4 +1,21 @@
 terraform {
+  # backend "remote" {
+  #   hostname = "app.terraform.io"
+  #   organization = "example-org-dd92dc"
+
+  #   workspaces {
+  #     name = "terra-house-"
+  #   }
+  # }
+ cloud { 
+    
+    organization = "example-org-dd92dc" 
+
+    workspaces { 
+      name = "terra-house-" 
+    } 
+  } 
+
   required_providers {
     random = {
       source = "hashicorp/random"
