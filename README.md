@@ -268,3 +268,5 @@ Provide de following code (replace your token in the file):
   }
 }
 ```
+
+We automated this workaroud with the following bash script [bin/generate_tfrc_credentials/] (bin/generate_tfrc_credentials)
